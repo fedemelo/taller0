@@ -67,6 +67,37 @@ public class CalculadoraEstadisticas
 	// Métodos
 	// ************************************************************************
 
+	
+	
+	// -----------------------------------------------------------------------------------------
+	
+	/**
+	 * TALLER 0
+	 * 
+	 * Encuentra el país representado por un determinado atleta.
+	 * 
+	 * @param nombreatleta Nombre del atleta a consultar.
+	 * @return El país al que representa el atleta.
+	 */
+	public String paisAtleta(String nombreAtleta){
+		
+		Pais elPais = null;
+		Atleta elAtleta = buscarAtleta(nombreAtleta);
+		String nombrepais = null;
+		
+		if (elAtleta != null){
+			elPais = elAtleta.darPais();
+		}
+		
+		nombrepais = elPais.darNombre();
+		
+		return nombrepais;
+	}
+	
+	// -----------------------------------------------------------------------------------------
+	
+	
+	
 	/**
 	 * Calcula cuáles fueron los atletas que participaron en cada evento para el año
 	 * indicado
